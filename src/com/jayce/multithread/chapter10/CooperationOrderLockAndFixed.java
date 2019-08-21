@@ -8,7 +8,7 @@ package com.jayce.multithread.chapter10;
  */
 public class CooperationOrderLockAndFixed {
     /***************************************************************************************
-    *
+    *  注意，容易发生死锁
     ****************************************************************************************/
     private static class Taxi1 {
 
