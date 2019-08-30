@@ -115,6 +115,7 @@ public class CooperationOrderLockAndFixed {
         }
 
         public synchronized void notifyAvailable(Taxi2 taxi2) {
+            //  this is test comment
         }
 
         public Image getImage() {
