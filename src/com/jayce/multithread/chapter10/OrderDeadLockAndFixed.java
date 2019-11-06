@@ -80,12 +80,13 @@ public class OrderDeadLockAndFixed{
     private static class Account {
 
         public Comparable<DollarAmount> getBalance() {
-            return new Comparable<DollarAmount>() {
+            /*return new Comparable<DollarAmount>() {
                 @Override
                 public int compareTo(DollarAmount o) {
                     return 0;
                 }
-            };
+            };*/
+            return o -> 0;
         }
 
         public void debit(DollarAmount amount) {
