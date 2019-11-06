@@ -1,4 +1,4 @@
-package com.jayce.designpattern.Observer;
+package com.jayce.designpattern.observer;
 
 /**
  * @author Jayce Tang

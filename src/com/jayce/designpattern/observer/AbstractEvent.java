@@ -1,4 +1,4 @@
-package com.jayce.designpattern.Observer;
+package com.jayce.designpattern.observer;
 
 import java.util.LinkedList;
 import java.util.List;

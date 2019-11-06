@@ -86,12 +86,12 @@ enum  Singleton6 {
     INSTANCE {
         @Override
         protected void read() {
-
+            System.out.println("reading");
         }
 
         @Override
         protected void write() {
-
+            System.out.println("writing");
         }
     };
 
