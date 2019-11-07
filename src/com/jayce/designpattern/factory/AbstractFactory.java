@@ -6,6 +6,8 @@ package com.jayce.designpattern.factory;
  * @version 1.0
  * @date 2019/11/6 16:02
  * @description
+ * 抽象工厂模式是围绕一个超级工厂创建其他工厂。该超级工厂又称为其他工厂的工厂。这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+ * 也就是提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。
  */
 public class AbstractFactory {
     public static void main(String[] args) {
@@ -121,7 +123,3 @@ class NorthFactory implements FruitFactory {
         return new NorthBanana();
     }
 }
-
-
-
-

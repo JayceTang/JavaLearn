@@ -5,6 +5,8 @@ package com.jayce.designpattern.factory;
  * @version 1.0
  * @date 2019/11/6 15:46
  * @description 简单工厂模式及工厂方法模式
+ * 简单工厂模式是属于创建型模式，又叫做静态工厂方法模式。简单工厂模式是由一个工厂对象决定创建出哪一种产品类的实例。
+ * 调用只需要告诉工厂类所需要的类型，工厂类就会返回需要的产品类工厂的子类。 可以说是工厂模式中最简单的一种。
  */
 public class FactoryTest {
     private static final String LOL="LOL";

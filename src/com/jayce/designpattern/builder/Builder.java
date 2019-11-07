@@ -6,6 +6,9 @@ package com.jayce.designpattern.builder;
  * @version 1.0
  * @date 2019/11/6 16:36
  * @description
+ * 建造者模式是属于创建型模式。建造者模式使用多个简单的对象一步一步构建成一个复杂的对象。
+ * 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+ * 简单的来说就是将一个复杂的东西抽离出来，对外提供一个简单的调用，可以在同样的构建过程创建不同的表示。和工厂模式很相似，不过相比而言更加注重组件的装配。
  */
 public class Builder {
     public static void main(String[] args) {
