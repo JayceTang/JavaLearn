@@ -23,13 +23,15 @@ public class CommandTest {
          * 2、Command  ;
          * 3、invoker 使用命令对象的入口;
          */
-        String name = "xiaobai";
+        String name = "小白";
         Student student = new  Student();
         Command command1 = new LiTeacher(student);
         Command command2 = new WangTeacher(student);
+        Command command3 = new HuTeacher(student);
         Invoker invoker =new Invoker();
         invoker.setCommand(command1);
         invoker.setCommand(command2);
+        invoker.setCommand(command3);
         invoker.executeCommand(name);
 
 		/*
@@ -47,6 +49,9 @@ class Student{
     }
     void doHomeWork(String name){
         System.out.println(name+" 开始做作业...");
+    }
+    void trimTree(String name) {
+        System.out.println(name + " 开始修剪树木...");
     }
 }
 
@@ -82,6 +87,17 @@ class WangTeacher extends Command{
     }
 }
 
+class HuTeacher extends Command {
+    public HuTeacher(Student student) {
+        super(student);
+    }
+
+    @Override
+    void execute(String name) {
+        student.trimTree(name);
+    }
+}
+
 
 //用于执行这个请求
 class Invoker {
@@ -91,17 +107,22 @@ class Invoker {
     //添加这个命令
     public void setCommand(Command command) {
         //设置执行命令的
-        if(command.toString().indexOf("WangTeacher")>-1) {
+        /*if(command.toString().indexOf("WangTeacher")>-1) {
             System.out.println("不执行 WangTeacher 的命令!");
         }else {
             commands.add(command);
-        }
+        }*/
+        commands.add(command);
     }
 
     //执行这个命令
     public void executeCommand(String name) {
         commands.forEach(command->{
-            command.execute(name);
+            if (command.toString().indexOf("WangTeacher")>-1) {
+                System.out.println("不执行 WangTeacher 的命令!");
+            } else {
+                command.execute(name);
+            }
         });
     }
 
